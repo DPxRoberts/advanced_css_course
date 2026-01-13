@@ -1,0 +1,146 @@
+
+/* -----------------------------------------------------
+   Google Fonts
+   - Montserrat is the primary UI font
+   - Roboto is imported for optional future use
+   ----------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
+
+/*
+COLORS:
+*/
+
+:root {
+    --light-green: #7ed56f;
+    --Light-green-gradient: rgba(126, 213, 111, 0.8);
+    --Medium-green: #55c57a;
+    --dark-green: #28b485;
+    --Dark-green-gradeient: rgba(40, 180, 131, 0.8);
+    --text: #777;
+    --text-white: #fff;
+    --text-dark: #000;
+}
+
+/* -----------------------------------------------------
+   Global Reset
+   - Removes default browser spacing
+   - Ensures predictable box sizing
+   ----------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-color: var(--Medium-green) #000;
+}
+
+body {
+    font-family: "Roboto", "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    
+    /* 1rem == 16px */
+    font-size: 1rem;
+    color: var(--text);
+    
+    /* Padding = 30px */
+    padding: 1.875rem; 
+}
+
+header {
+    font-size: 2.5rem;
+    color: var(--text-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: relative;
+    height: 95vh;
+   
+    /* Background image with a light green gradient to a dark green gradeient going from top left to bottom right.  */
+    background-image: linear-gradient(to right bottom, 
+    var(--Light-green-gradient), 
+    var(--Dark-green-gradeient)), 
+    url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+    width: auto;
+}
+
+.text-box {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading__primary {
+    color: var(--text-white);
+    text-transform: uppercase;
+
+}
+
+
+.heading__primary-main,
+.heading__primary-sub {
+    display: block;
+    font-weight: 400;
+}
+
+.heading__primary-main {
+    font-size: 3.75rem;
+    letter-spacing: 2.188rem;
+}
+
+.heading__primary-sub {
+    font-size: 1.25rem;
+    letter-spacing: 1.088rem;
+    
+}
+
+/* -----------------------------------------------------
+Primary Button Base
+----------------------------------------------------- */
+.btn {
+    display: inline-block;
+    color: #000;
+    background: var(--text-white);
+    text-transform: uppercase;
+    border-radius: 10rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--text-white);
+    border-color: var(--text-white);
+    color: var(--text-dark);
+}
+
+.btn:hover {
+    background: var(--text-white);
+    box-shadow: 0 0 25px var(--text-white);
+}
+
